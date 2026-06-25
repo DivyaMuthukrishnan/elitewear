@@ -1,0 +1,191 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Josefin Sans',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#dbe6ff,#f7d6e8);
+    min-height:100vh;
+}
+
+
+
+.main{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo{
+    width:180px;
+    height:100px;
+    object-fit:contain;
+}
+
+#title{
+    font-size:45px;
+    color:#8e2d73;
+}
+
+.line{
+    border:none;
+    height:2px;
+    background:#c44f9f;
+    margin:0 30px 30px;
+}
+
+
+.btn{
+    text-decoration:none;
+    border:2px solid #8e2d73;
+    color:#8e2d73;
+    padding:12px 18px;
+    border-radius:20px;
+    display:inline-block;
+    text-align:center;
+    transition:0.3s;
+    margin-top:12px;
+}
+
+.btn:hover{
+    background:#d96cb3;
+    color:white;
+    cursor: pointer;
+}
+
+
+
+.shop{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    padding:40px;
+}
+
+.card{
+    background:white;
+    border:2px solid #f0c4df;
+    border-radius:25px;
+    padding:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    min-height:700px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+
+.card img{
+    width:100%;
+    max-width:280px;
+    height:350px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+.card h3{
+    margin-top:20px;
+    font-size:22px;
+    color:#2f2131;
+    text-align:center;
+    min-height:60px;
+}
+
+
+.card p{
+    margin-top:15px;
+    color:#555;
+    text-align:center;
+}
+
+
+.price{
+    font-size:18px;
+    font-weight:600;
+    color:#e91e63 !important;
+    text-align:center;
+    margin-top:15px;
+}
+
+.price del{
+    color:gray;
+    margin-left:10px;
+    font-weight:normal;
+}
+
+
+.card .btn{
+    width:100%;
+    margin-top:15px;
+}
+
+
+@media (max-width:900px){
+
+    .shop{
+        grid-template-columns:repeat(2,1fr);
+        padding:25px;
+        gap:20px;
+    }
+
+    #title{
+        font-size:35px;
+    }
+
+    .card{
+        min-height:680px;
+    }
+}
+
+
+@media (max-width:600px){
+
+    .main{
+        flex-direction:column;
+        text-align:center;
+        gap:20px;
+        padding:20px;
+    }
+
+    .brand{
+        justify-content:center;
+    }
+
+    .logo{
+        width:65px;
+        height:65px;
+    }
+
+    #title{
+        font-size:30px;
+    }
+
+    .shop{
+        grid-template-columns:1fr;
+        padding:20px;
+    }
+
+    .card{
+        min-height:auto;
+    }
+
+    .card img{
+        height:300px;
+    }
+}

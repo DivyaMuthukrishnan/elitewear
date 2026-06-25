@@ -1,0 +1,151 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+    background:linear-gradient(
+        135deg,
+        #fff5f7,
+        #da7b97,
+        #de4484,
+        #fff0f6
+    );
+    background-size:400% 400%;
+    animation:bgmove 10s infinite alternate;
+}
+
+@keyframes bgmove{
+    from{
+        background-position:left;
+    }
+    to{
+        background-position:right;
+    }
+}
+
+.about{
+    width:90%;
+    max-width:900px;
+    background:rgba(255,255,255,0.65);
+    backdrop-filter:blur(12px);
+    padding:50px;
+    border-radius:35px;
+    text-align:center;
+    box-shadow:
+        0 15px 40px rgba(219,39,119,0.15),
+        0 0 30px rgba(255,255,255,0.5);
+    border:2px solid rgba(255,255,255,0.5);
+
+    animation:fadeup 1.2s ease;
+}
+
+@keyframes fadeup{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.about h2{
+    color:#be185d;
+    font-size:45px;
+    margin-bottom:30px;
+    letter-spacing:2px;
+}
+
+.about p{
+    font-size:18px;
+    color:#5b2144;
+    line-height:1.9;
+    margin-bottom:20px;
+}
+
+.about h3{
+    color:#db2777;
+    margin:30px 0 20px;
+    font-size:28px;
+}
+
+.about ul{
+    margin-bottom:30px;
+}
+
+.about li{
+    font-size:18px;
+    color:#5b2144;
+    margin:18px 0;
+    padding:12px;
+    border-radius:15px;
+    background:rgba(255,255,255,0.6);
+    transition:0.4s;
+}
+
+.about li:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 20px rgba(219,39,119,0.15);
+}
+
+.about b{
+    color:#be185d;
+    font-size:22px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(
+        to right,
+        #ec4899,
+        #db2777
+    );
+    padding:15px 35px;
+    border-radius:35px;
+    font-size:18px;
+    font-weight:600;
+    box-shadow:0 8px 20px rgba(219,39,119,0.25);
+    transition:0.4s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 30px rgba(219,39,119,0.35);
+}
+
+
+@media(max-width:768px){
+
+    .about{
+        padding:35px 25px;
+    }
+
+    .about h2{
+        font-size:35px;
+    }
+
+    .about h3{
+        font-size:24px;
+    }
+
+    .about p,
+    .about li{
+        font-size:16px;
+    }
+
+    .btn{
+        width:100%;
+    }
+}

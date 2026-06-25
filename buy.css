@@ -1,0 +1,169 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+
+    background:linear-gradient(
+        135deg,
+        #fff5f8,
+        #ffdce8,
+        #ffc8dd
+    );
+    padding:40px 20px;
+}
+
+h1{
+    text-align:center;
+    color:#b03060;
+    font-size:45px;
+    margin-bottom:30px;
+}
+
+.container{
+    max-width:1300px;
+    margin:auto;
+    display:flex;
+    gap:40px;
+    background:rgba(255,255,255,0.4);
+    padding:30px;
+    border-radius:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.product{
+    flex:1;
+    background:white;
+    border-radius:25px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,0.1);
+}
+
+.product img{
+    width:100%;
+    max-width:350px;
+    border-radius:20px;
+}
+
+.product h2{
+    color:#b03060;
+    margin-top:20px;
+}
+
+.product .btn{
+    margin-top:20px;
+    display:inline-block;
+    background:#ffe4ec;
+    padding:15px 30px;
+    border-radius:15px;
+    color:#b03060;
+}
+
+.form{
+    flex:1;
+    background:rgb(252, 249, 252);
+    border-radius:25px;
+    padding:40px;
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 8px 25px rgba(0,0,0,0.1);
+}
+
+.form label{
+    margin-top:15px;
+    margin-bottom:8px;
+    color:#b03060;
+    font-weight:600;
+}
+
+.form input,
+.form select{
+    padding:14px;
+    border:2px solid #ffc0cb;
+    border-radius:12px;
+    font-size:16px;
+    outline:none;
+}
+
+.form input:focus,
+.form select:focus{
+    border-color:#d63384;
+}
+
+.form button{
+    margin-top:30px;
+    padding:15px;
+    border:none;
+    border-radius:15px;
+    background:linear-gradient(
+        to right,
+        #ff5fa2,
+        #d63384
+    );
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.form button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(214,51,132,0.4);
+}
+
+@media(max-width:900px){
+
+    .container{
+        gap:20px;
+        padding:20px;
+    }
+
+    h1{
+        font-size:35px;
+    }
+}
+
+@media(max-width:768px){
+
+    .container{
+        flex-direction:column;
+    }
+
+    .product img{
+        max-width:280px;
+    }
+
+    .form{
+        padding:25px;
+    }
+
+    h1{
+        font-size:30px;
+    }
+}
+
+@media(max-width:480px){
+
+    body{
+        padding:20px 10px;
+    }
+
+    h1{
+        font-size:26px;
+    }
+
+    .product,
+    .form{
+        padding:20px;
+    }
+
+    .form input,
+    .form select,
+    .form button{
+        font-size:15px;
+    }
+}

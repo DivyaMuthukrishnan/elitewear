@@ -1,0 +1,215 @@
+body{
+   background-image: url('images/bg.webp');
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 100vh;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    background-color: rgb(161, 76, 128);
+    color: rgb(61, 21, 148);
+
+    }
+#title{
+    margin:0;
+    padding: 0;
+     font-family: "Josefin Sans", sans-serif;
+     font-size: 40px;
+     color: #842864;
+}
+nav {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+     padding: 20px 30px;
+     margin: 0;
+    
+  
+}
+.nav{
+
+    padding: 12px 25px;
+    color: rgb(70, 31, 133);
+    border-style: solid;
+    border-width: 2px ;
+    border-radius: 20px;
+    border-color: rgb(156, 9, 114);
+     font-family: "Josefin Sans", sans-serif;
+     font-size: 20px;
+  
+}
+header{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    margin-top: 0;
+   
+}
+.nav:hover{
+   transform: scale(1.05);
+    transition: 0.3s;
+}
+.line{
+    border: none;
+    height: 3px;
+    width: 100%;
+    margin:0;
+    background: linear-gradient(to right,
+                transparent,
+                #a61c7c,
+                #d96cb3,
+                transparent);
+    border-radius: 10px;
+}
+.brand{
+    display: flex;
+    align-items: center;
+   
+}
+.brand img{
+    width: 160px;   
+}
+.logo{
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        filter:drop-shadow(0 0 5px #28b51e);
+    }
+    to{
+        filter:drop-shadow(0 0 20px #14020b);
+    }
+}
+.homepara{
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 24px;
+     color: #2c1a2a;
+      margin-bottom: 30px;
+
+      
+}
+.para h1{
+  
+    font-family: "Playfair Display", serif;
+    font-size:50px;
+    color:#6b1e5e ;
+    margin: 12px;
+}
+.para{
+    margin: 0;
+    width: 40%;
+
+}
+.mainimg{
+    height: 30%;
+    width: 100%;
+        border-radius: 25px;
+    
+}
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 80px;
+    gap: 80px;
+}
+.button{
+    padding: 15px 25px;
+    border: none;
+    display: inline-block;
+    border-radius: 15px;
+    background: linear-gradient(to right,#d96cb3,#b84d9d);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.button:hover{
+     transform: scale(1.05);
+     transition: 0.3s;
+}
+.img{
+    width: 80%;
+}
+@media (max-width:825px){
+    .button{
+        white-space: nowrap;
+        width: fit-content;
+        padding: 12px 20px;
+    }
+}
+@media (max-width:768px){
+
+    header{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .brand{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav{
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .hero{
+        flex-direction: column;
+        text-align: center;
+        
+        padding: 30px 20px;
+    }
+    .button{
+        position: static;
+        margin-top: 20px;
+    }
+    .para,
+    .img{
+        width: 100%;
+    }
+
+    .para h1{
+        font-size: 50px;
+    }
+
+    .homepara{
+        width: 90%;
+        margin: auto;
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+    
+    .mainimg{
+        width: 90%;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 480px){
+
+    .homepara h1{
+        font-size: 35px;
+    }
+
+    .homepara p{
+        font-size: 16px;
+        
+    }
+  
+}
+
